@@ -135,5 +135,12 @@ form input{
 .messages-section{
     width: 65%;
     height: 100%;
-    background-color: bisque;
+}
+.messages-background{
+    background-image: url(../img/mine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
 }
