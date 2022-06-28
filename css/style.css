@@ -99,19 +99,17 @@ form{
     display: flex;
     justify-content: flex-start;
     margin: 0.5rem 0;
-    padding: 0.5rem 0;
     border: 1px solid rgba(177, 177, 177, 0.2);
     width: 100%;
     border-radius: 10px;
 }
 form button{
-    padding: 0.4rem 2rem;
+    padding: 0.8rem 2rem;
     border: none;
     color: #b1b1b1;
     background-color: white;
 }
 form input{
-    padding: 0.4rem 0;
     border: none;
     width: 100%;
 }
@@ -178,4 +176,31 @@ form input{
     font-size: 0.8rem;
     color: grey;
     text-align: right;
+}
+/* LOWER MAIN */
+.lower-main-form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lower-main-form form{
+    width: 70%;
+}
+.lower-main-form form input{
+    padding: 0.8rem 2rem;
+}
+.smile-icon{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: grey;
+}
+.audio-icon{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: grey;
 }
