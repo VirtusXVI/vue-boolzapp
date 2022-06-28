@@ -10,6 +10,7 @@ body{
 .app-wrapper{
     height: 100vh;
     width: 100%;
+    background-color: lightcyan;
 }
 .container{
     width: 75%;
@@ -27,6 +28,7 @@ body{
     height: 90vh;
     width: 75%;
     display: flex;
+    border: 1px solid #d6d6d6;
 }
 /* COMMON */
 header{
@@ -42,7 +44,7 @@ img{
 .contacts-section{
     width: 35%;
     height: 100%;
-    background-color: aqua;
+    background-color: #fafafa;
     border-right: 1px solid #d6d6d6;
 }
 .header-adjustments{
@@ -50,9 +52,11 @@ img{
     justify-content: space-between;
     padding: 0 1rem;
 }
+/* USERNAME */
 .flex-username{
     align-items: center;
 }
+/* ICONS */
 .flex-icons{
     align-items: center;
 }
@@ -63,6 +67,69 @@ img{
 }
 .user-name{
     font-size: 1.1rem;
+}
+/* BANNER */
+.banner-background{
+    background-color: #8edafb;
+    padding: 1rem 0;
+}
+.banner-adjustments{
+    display: flex;
+    align-items: center;
+}
+.bell-icon{
+    color: #8edafb;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #f3fbfe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+.notifications{
+    color: #6191a6;
+}
+/* CONTACTS */
+.contacts-adjustments .form{
+    margin: 0 0.5rem;
+}
+form{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    border: 1px solid rgba(177, 177, 177, 0.2);
+    width: 100%;
+    border-radius: 10px;
+}
+form button{
+    padding: 0.4rem 2rem;
+    border: none;
+    color: #b1b1b1;
+    background-color: white;
+}
+form input{
+    padding: 0.4rem 0;
+    border: none;
+    width: 100%;
+}
+/* CONTACTS CARDS */
+.contacts-cards .contact-card{
+    margin: 0 0.5rem;
+}
+.contacts-cards{
+    margin: 1rem 0;
+}
+.contact-card{
+    display: flex;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(177, 177, 177, 0.2);
+}
+.contact-name{
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
 }
 /* MESSAGES SECTION */
 .messages-section{
