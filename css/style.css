@@ -143,8 +143,6 @@ form input{
 }
 .messages-background{
     background-image: url(../img/mine.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     height: calc(100% - 8%);
     width: 100%;
 }

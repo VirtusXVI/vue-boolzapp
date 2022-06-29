@@ -62,7 +62,7 @@
                                 <div class="contacts-cards">
                                     <div v-for="(contact,index) in contacts" class="contact-card">
                                         <div class="contact-image">
-                                            <img :src="contacts[index].img" alt="">
+                                            <img :src="`img/avatar${contacts[index].avatar}.jpg`" alt="">
                                         </div>
                                         <div class="contact-name">
                                             <span>{{ contacts[index].name }}</span>
