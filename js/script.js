@@ -102,6 +102,13 @@ var app = new Vue (
                 text: this.newMessage,
                 status: 'sent'})
                 this.newMessage = "";
+                setTimeout(this.addNewAnswer, 1000);
+            },
+            addNewAnswer(){
+                console.log("ciao");
+                this.contacts[this.activeContact].messages.push({date: '',
+                text: "ok",
+                status: 'received'})
             }
         },
         mounted(){
