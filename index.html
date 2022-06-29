@@ -60,7 +60,7 @@
                                     </form>
                                 </div>
                                 <div class="contacts-cards">
-                                    <div v-for="(contact,index) in contacts" class="contact-card">
+                                    <div v-for="(contact,index) in contacts" class="contact-card" @click="setActiveContact(index)" :class="activeContact === index ? 'active-contact' : ''">
                                         <div class="contact-image">
                                             <img :src="`img/avatar${contacts[index].avatar}.jpg`" alt="">
                                         </div>
@@ -96,54 +96,14 @@
                             <div class="messages-container">
                                 <!-- MESSAGES -->
                                 <div class="flex-container messages-adjustments">
-                                    <div class="message sent">
+                                    <div v-for="(message,index) in contacts[activeContact].messages" class="message" :class="contacts[activeContact].messages[index].status === 'received' ? 'received' : 'sent'">
                                         <!-- MESSAGE TEXT -->
                                         <span>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis pariatur, magnam molestiae consequuntur tempore eligendi unde beatae corrupti commodi, vel, labore repellendus delectus quia eveniet nulla optio repellat accusamus! Rem.
+                                            {{contacts[activeContact].messages[index].text}}
                                         </span>
                                         <!-- MESSAGE DATA -->
                                         <span class="message-data">
-                                            data
-                                        </span>
-                                    </div>
-                                    <div class="message received">
-                                        <!-- MESSAGE TEXT -->
-                                        <span>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis pariatur, magnam molestiae consequuntur tempore eligendi unde beatae corrupti commodi, vel, labore repellendus delectus quia eveniet nulla optio repellat accusamus! Rem.
-                                        </span>
-                                        <!-- MESSAGE DATA -->
-                                        <span class="message-data">
-                                            data
-                                        </span>
-                                    </div>
-                                    <div class="message sent">
-                                        <!-- MESSAGE TEXT -->
-                                        <span>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis pariatur, magnam molestiae consequuntur tempore eligendi unde beatae corrupti commodi, vel, labore repellendus delectus quia eveniet nulla optio repellat accusamus! Rem.
-                                        </span>
-                                        <!-- MESSAGE DATA -->
-                                        <span class="message-data">
-                                            data
-                                        </span>
-                                    </div>
-                                    <div class="message sent">
-                                        <!-- MESSAGE TEXT -->
-                                        <span>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis pariatur, magnam molestiae consequuntur tempore eligendi unde beatae corrupti commodi, vel, labore repellendus delectus quia eveniet nulla optio repellat accusamus! Rem.
-                                        </span>
-                                        <!-- MESSAGE DATA -->
-                                        <span class="message-data">
-                                            data
-                                        </span>
-                                    </div>
-                                    <div class="message received">
-                                        <!-- MESSAGE TEXT -->
-                                        <span>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis pariatur, magnam molestiae consequuntur tempore eligendi unde beatae corrupti commodi, vel, labore repellendus delectus quia eveniet nulla optio repellat accusamus! Rem.
-                                        </span>
-                                        <!-- MESSAGE DATA -->
-                                        <span class="message-data">
-                                            data
+                                            {{contacts[activeContact].messages[index].date}}
                                         </span>
                                     </div>
                                 </div>
