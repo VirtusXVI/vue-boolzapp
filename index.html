@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.3/dayjs.min.js" integrity="sha512-Ot7ArUEhJDU0cwoBNNnWe487kjL5wAOsIYig8llY/l0P2TUFwgsAHVmrZMHsT8NGo+HwkjTJsNErS6QqIkBxDw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
@@ -78,10 +79,13 @@
                             <!-- USERNAME -->
                             <div class="flex-container">
                                 <div>
-                                    <img src="img/avatar_io.jpg" alt="">
+                                    <img :src="`img/avatar${contacts[activeContact].avatar}.jpg`" alt="">
                                 </div>
                                 <div>
-                                    <span class="user-name">Nome Utente</span>
+                                    <span class="user-name">{{ contacts[activeContact].name }}</span>
+                                    <div class="">
+                                        <span>ultimo accesso eseguito alle</span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- ICON -->
@@ -114,8 +118,9 @@
                                     <div class="smile-icon">
                                         <i class="fa-solid fa-face-smile"></i>
                                     </div>
-                                    <form>
-                                        <input type="text" placeholder="Scrivi un messaggio">
+                                    <form @submit.prevent="addNewMessage()">
+                                        <input v-model="newMessage" type="text" placeholder="Scrivi un messaggio">
+                                        <span v-on:click="addNewMessage()"></span>
                                     </form>
                                     <div class="audio-icon">
                                         <i class="fa-solid fa-microphone"></i>

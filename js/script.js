@@ -71,7 +71,7 @@ var app = new Vue (
                 },
                 {
                     name: 'Luisa',
-                    avatar: '_4',
+                    avatar: '_6',
                     visible: true,
                     messages: [
                         {
@@ -89,12 +89,19 @@ var app = new Vue (
                 
             ],
             activeContact: 0,
-
+            newMessage: "",
             
         },
         methods:{
             setActiveContact(index){
                 this.activeContact = index;
+            },
+            addNewMessage(){
+                // creare un altro oggetto nell'array di messaggi della persona corrispondente
+                this.contacts[this.activeContact].messages.push({date: '',
+                text: this.newMessage,
+                status: 'sent'})
+                this.newMessage = "";
             }
         },
         mounted(){
