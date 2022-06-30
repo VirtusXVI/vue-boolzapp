@@ -97,11 +97,13 @@ var app = new Vue (
                 this.activeContact = index;
             },
             addNewMessage(){
-                this.contacts[this.activeContact].messages.push({date: '',
-                text: this.newMessage,
-                status: 'sent'})
-                this.newMessage = "";
-                setTimeout(this.addNewAnswer, 1000);
+                if(this.newMessage.length > 0){
+                    this.contacts[this.activeContact].messages.push({date: '',
+                    text: this.newMessage,
+                    status: 'sent'})
+                    this.newMessage = "";
+                    setTimeout(this.addNewAnswer, 1000);
+                }
             },
             addNewAnswer(){
                 this.contacts[this.activeContact].messages.push({date: '',
