@@ -98,7 +98,8 @@ var app = new Vue (
             },
             addNewMessage(){
                 if(this.newMessage.length > 0){
-                    this.contacts[this.activeContact].messages.push({date: '',
+                    let time = dayjs().format('DD/MM/YYYY HH:mm:ss')
+                    this.contacts[this.activeContact].messages.push({date: time,
                     text: this.newMessage,
                     status: 'sent'})
                     this.newMessage = "";
@@ -106,7 +107,8 @@ var app = new Vue (
                 }
             },
             addNewAnswer(){
-                this.contacts[this.activeContact].messages.push({date: '',
+                let time = dayjs().format('DD/MM/YYYY HH:mm:ss')
+                this.contacts[this.activeContact].messages.push({date: time,
                 text: "ok",
                 status: 'received'})
             },
