@@ -47,12 +47,14 @@ img{
 }
 /* CONTACTS SECTION */
 .contacts-section{
+    overflow: hidden;
     width: 35%;
     height: 100%;
     background-color: #fafafa;
     border-right: 1px solid #d6d6d6;
 }
 .header-adjustments{
+    height: 10%;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
@@ -123,9 +125,6 @@ form input{
     overflow-y: auto;
     height: calc(100% - 10%);
 }
-/* .contacts-cards .contact-card{
-    margin: 0 0.5rem;
-} */
 .contacts-cards{
     margin: 1rem 0;
 }
@@ -151,7 +150,7 @@ form input{
 }
 .messages-background{
     background-image: url(../img/mine.jpg);
-    height: calc(100% - 8%);
+    height: calc(100% - 10%);
     width: 100%;
 }
 .messages-container{
